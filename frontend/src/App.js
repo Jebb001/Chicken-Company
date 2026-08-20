@@ -65,7 +65,7 @@ function App() {
             alt="The Chicken Whisperer — Original foods made with British chicken. Launching September 2026."
             data-testid="hero-image"
             style={{ x: imgX, y: imgY }}
-            className="h-full w-full object-contain will-change-transform"
+            className="hero-fit h-full w-full will-change-transform"
             draggable={false}
           />
         </motion.div>

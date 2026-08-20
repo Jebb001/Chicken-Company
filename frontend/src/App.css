@@ -1,3 +1,15 @@
+.hero-fit {
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+@media (max-aspect-ratio: 4/5), (min-aspect-ratio: 19/10) {
+  .hero-fit {
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
 .vignette {
   background:
     radial-gradient(120% 90% at 50% 42%, transparent 55%, rgba(6, 8, 5, 0.42) 100%),
