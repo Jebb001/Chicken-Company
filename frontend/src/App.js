@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import Lenis from "lenis";
 import "@/App.css";
-import Countdown from "@/components/Countdown";
 
 const EASE = [0.76, 0, 0.24, 1];
 
@@ -81,8 +80,6 @@ function App() {
         animate={{ scaleX: 1, opacity: 0 }}
         transition={{ duration: 2.4, ease: EASE, delay: 0.9 }}
       />
-
-      <Countdown />
     </main>
   );
 }
