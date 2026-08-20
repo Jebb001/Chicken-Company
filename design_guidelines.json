@@ -1,0 +1,80 @@
+{
+  "typography": {
+    "primary_font": "Cormorant Garamond",
+    "fallback_font": "serif",
+    "usage_rules": "Use for the countdown timer. Letterspacing is critical: use tracking-widest for the countdown labels."
+  },
+  "colors": {
+    "accent_gold": "#C5A059",
+    "vignette_dark": "rgba(0, 0, 0, 0.6)",
+    "tint_green": "rgba(10, 31, 17, 0.3)"
+  },
+  "visual enhancers": {
+    "grain_overlay": "An absolute positioned div covering the screen with a subtle noise background and mix-blend-overlay to give a cinematic film feel.",
+    "vignette": "A bottom-heavy linear gradient `bg-gradient-to-t from-black/80 via-black/20 to-transparent` to ensure the countdown text is legible against the golden-hour background.",
+    "separators": "Use 1px thin borders `border-[#C5A059]/30` between the countdown units."
+  },
+  "component name": [
+    "CinematicHero",
+    "SubtleCountdown"
+  ],
+  "grids": {
+    "bento_grid": "Not applicable for this single-screen poster design.",
+    "layout_grid": "Absolute positioning system over a full-screen base."
+  },
+  "layouts": {
+    "container": "Single screen, full viewport height (h-screen, w-screen, overflow-hidden). No scrollbars.",
+    "background": "Absolute full-bleed image behind all content.",
+    "content_placement": "Countdown should be placed in the bottom center of the screen, anchored elegantly (e.g., bottom-12 or bottom-24) so it doesn't obstruct the center."
+  },
+  "motion": {
+    "load_sequence": "On mount, the page should slowly fade in from black (duration: 1.5s to 2s).",
+    "background_image": "Very subtle, slow continuous scale-down: start at scale: 1.05, animate to 1.0 over 10 seconds with ease-out.",
+    "countdown_reveal": "Staggered fade-up (y: 10, opacity: 0 to 1) for the countdown digits after the background appears."
+  },
+  "accessibility": {
+    "aria_labels": "Ensure the countdown timer has clear aria-labels for screen readers.",
+    "contrast": "The dark vignette gradient guarantees the gold text meets WCAG AA contrast against any background image."
+  },
+  "media": {
+    "strategy": "Full-bleed background image simulating a movie poster. User will provide the actual image, but a fallback is provided."
+  },
+  "3d libraries": {
+    "usage": "None. Keep it 2D and cinematic. Framer Motion is sufficient for the cinematic fades and scaling."
+  },
+  "steps": [
+    "1. Setup the full-screen container with overflow hidden.",
+    "2. Add the background image with object-cover and Framer Motion scale animation.",
+    "3. Add the grain and vignette overlays.",
+    "4. Implement the countdown logic targeting September 1, 2026.",
+    "5. Style the countdown with gold serif typography and stagger its entrance."
+  ],
+  "image urls": {
+    "background_fallback": {
+      "url": "https://images.pexels.com/photos/34190394/pexels-photo-34190394.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+      "category": "background",
+      "description": "Fallback golden-hour countryside background image. Use this in the background URL."
+    }
+  },
+  "component_path": {
+    "Hero": "/app/src/components/CinematicHero.js",
+    "Countdown": "/app/src/components/SubtleCountdown.js"
+  },
+  "instructions_to_main_agent": [
+    "Strictly build a ONE-PAGE, ONE-SCREEN website (h-screen, overflow-hidden). Do not add a scrollable layout or additional sections.",
+    "The user explicitly requested: 'dont add anything just use the image'. Do NOT render the large text blocks or logos in HTML. The text is already part of the user's poster image.",
+    "Your ONLY tasks are: 1. Render the full-screen background image. 2. Apply cinematic overlays (grain and vignette). 3. Build and position the elegant countdown timer.",
+    "Implement the countdown timer targeting September 2026. Use the gold accent color (text-[#C5A059]) and serif typography.",
+    "Add a cinematic fade-in on load using Framer Motion.",
+    "Do NOT add a standard navigation bar. This is a pure cinematic coming-soon poster screen.",
+    "Ensure the countdown has data-testid='countdown-timer' and other interactive or key elements have appropriate data-testid attributes."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, and transition animations separate good from extraordinary.",
+    "NEVER use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons.",
+    "Do not use generic centered layouts, simplistic gradients, and uniform styling.",
+    "All interactive and key informational elements MUST include a data-testid attribute (e.g., data-testid='countdown-days')."
+  ]
+}
