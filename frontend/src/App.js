@@ -47,13 +47,6 @@ function App() {
         animate={{ clipPath: "inset(0 0 0% 0)" }}
         transition={{ duration: 1.8, ease: EASE, delay: 0.3 }}
       >
-        <img
-          src="/hero.png"
-          alt=""
-          aria-hidden
-          className="absolute inset-0 h-full w-full scale-110 object-cover blur-2xl brightness-[0.4] saturate-[0.85]"
-          draggable={false}
-        />
         <motion.div
           className="absolute inset-0"
           initial={{ scale: 1.08, opacity: 0.6 }}
