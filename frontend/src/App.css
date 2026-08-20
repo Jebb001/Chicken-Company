@@ -1,6 +1,6 @@
 .hero-fit {
-  object-fit: cover;
-  object-position: center bottom;
+  object-fit: contain;
+  object-position: center;
 }
 
 .vignette {

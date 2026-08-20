@@ -39,7 +39,7 @@ function App() {
       ref={frame}
       onMouseMove={onMove}
       data-testid="hero-page"
-      className="relative h-[100svh] w-full overflow-hidden bg-[#0a0d09]"
+      className="relative h-[100svh] w-full overflow-hidden bg-[#151009]"
     >
       <motion.div
         className="absolute inset-0"
