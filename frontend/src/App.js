@@ -53,14 +53,22 @@ function App() {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 2.6, ease: EASE, delay: 0.3 }}
         >
-          <motion.img
-            src="/hero.png"
-            alt="The Chicken Whisperer — Original foods made with British chicken. Launching September 2026."
-            data-testid="hero-image"
-            style={{ x: imgX, y: imgY }}
-            className="hero-fit h-full w-full will-change-transform"
-            draggable={false}
-          />
+          <motion.div style={{ x: imgX, y: imgY }} className="h-full w-full">
+            <img
+              src="/hero.png"
+              alt="The Chicken Whisperer — Original foods made with British chicken. Launching September 2026."
+              data-testid="hero-image"
+              className="hero-desktop-img hero-fit absolute inset-0 h-full w-full will-change-transform"
+              draggable={false}
+            />
+            <img
+              src="/hero-mobile.jpg"
+              alt="The Chicken Whisperer — Original foods made with British chicken. Launching September 2026."
+              data-testid="hero-image-mobile"
+              className="hero-mobile-img absolute inset-0 h-full w-full object-cover will-change-transform"
+              draggable={false}
+            />
+          </motion.div>
         </motion.div>
       </motion.div>
 

@@ -2,6 +2,20 @@
   object-fit: fill;
 }
 
+.hero-mobile-img {
+  display: none;
+}
+
+@media (max-aspect-ratio: 4/5) {
+  .hero-desktop-img {
+    display: none;
+  }
+  .hero-mobile-img {
+    display: block;
+  }
+}
+
+
 .vignette {
   background:
     radial-gradient(120% 90% at 50% 42%, transparent 55%, rgba(6, 8, 5, 0.42) 100%),
