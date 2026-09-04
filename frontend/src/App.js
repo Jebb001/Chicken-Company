@@ -2,39 +2,21 @@ import { useEffect, useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import Lenis from "lenis";
 import "@/App.css";
+import {
+  StorySection,
+  ProductsSection,
+  ChickenOilSection,
+  PetSection,
+  TradeSection,
+  ShopSection,
+  ContactSection,
+  scrollToId,
+} from "@/components/Sections";
 
 const EASE = [0.76, 0, 0.24, 1];
 const CREAM = "#f1e7d5";
 
-const PAGES = [
-  {
-    src: "/page-1.jpg",
-    alt: "The Chicken Whisperer? — the story of our founder, our welfare principles and our support for British farmers",
-    testId: "page-story",
-  },
-  {
-    src: "/page-2.jpg",
-    alt: "Pet Nutrition — high-protein premium pet foods, supplements and treats in development",
-    testId: "page-pet-nutrition",
-  },
-  {
-    src: "/page-3.jpg",
-    alt: "For Food Manufacturing and Foodservice — bulk Chicken Oil supply from 5 litre PET to 1,000 litre IBCs",
-    testId: "page-trade-supply",
-  },
-  {
-    src: "/page-4.jpg",
-    alt: "The Farm To Pantry range — flavour-rich chicken oil and forthcoming premium pantry products",
-    testId: "page-farm-to-pantry",
-  },
-  {
-    src: "/page-5.jpg",
-    alt: "Farm To Pantry — Opening Soon",
-    testId: "page-opening-soon",
-  },
-];
-
-const Page = ({ src, alt, testId }) => (
+const Cover = ({ src, alt, testId }) => (
   <section
     data-testid={testId}
     className="page-section relative flex h-[100svh] items-center justify-center overflow-hidden"
@@ -53,6 +35,16 @@ const Page = ({ src, alt, testId }) => (
       loading="lazy"
     />
   </section>
+);
+
+const HeroBtn = ({ children, onClick, testId }) => (
+  <button
+    onClick={onClick}
+    data-testid={testId}
+    className="cursor-pointer rounded-full border border-[#c9a45c]/60 bg-[#0a0d09]/55 px-6 py-2.5 font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-[#e6c27a] backdrop-blur-sm transition-colors duration-300 hover:bg-[#c9a45c] hover:text-[#16130c] sm:px-8 sm:py-3 sm:text-xs"
+  >
+    {children}
+  </button>
 );
 
 function App() {
@@ -134,25 +126,33 @@ function App() {
         />
 
         <motion.div
-          data-testid="scroll-cue"
-          className="pointer-events-none absolute inset-x-0 bottom-5 z-10 flex flex-col items-center gap-2 mix-blend-screen"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2, delay: 2.6 }}
+          data-testid="hero-cta"
+          className="absolute inset-x-0 bottom-[9%] z-10 flex flex-wrap items-center justify-center gap-3 px-4 sm:gap-5"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 2.2 }}
         >
-          <span className="font-display text-[10px] tracking-[0.5em] text-[#e6c27a]/80">SCROLL</span>
-          <motion.span
-            className="block h-8 w-px bg-gradient-to-b from-[#e6c27a]/80 to-transparent"
-            animate={{ scaleY: [0.3, 1, 0.3], opacity: [0.4, 1, 0.4] }}
-            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-            style={{ transformOrigin: "top" }}
-          />
+          <HeroBtn onClick={() => scrollToId("chicken-oil")} testId="hero-discover-btn">
+            Discover Our Pure Chicken Oil
+          </HeroBtn>
+          <HeroBtn onClick={() => scrollToId("trade")} testId="hero-trade-btn">
+            Trade Enquiries
+          </HeroBtn>
         </motion.div>
       </section>
 
-      {PAGES.map((p) => (
-        <Page key={p.src} {...p} />
-      ))}
+      <Cover src="/page-1.jpg" alt="The Chicken Whisperer? — the story of our founder and our principles" testId="page-story" />
+      <StorySection />
+      <ProductsSection />
+      <Cover src="/page-4.jpg" alt="The Farm To Pantry range — flavour-rich chicken oil and premium pantry products" testId="page-farm-to-pantry" />
+      <ChickenOilSection />
+      <Cover src="/page-2.jpg" alt="Pet Nutrition — high-protein premium pet foods, supplements and treats" testId="page-pet-nutrition" />
+      <PetSection />
+      <Cover src="/page-3.jpg" alt="For Food Manufacturing and Foodservice — bulk Chicken Oil supply" testId="page-trade-supply" />
+      <TradeSection />
+      <Cover src="/page-5.jpg" alt="Farm To Pantry — Opening Soon" testId="page-opening-soon" />
+      <ShopSection />
+      <ContactSection />
     </main>
   );
 }
