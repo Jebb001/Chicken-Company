@@ -19,7 +19,7 @@ const HeroBtn = ({ children, onClick, testId }) => (
   <button
     onClick={onClick}
     data-testid={testId}
-    className="cursor-pointer rounded-full border border-[#c9a45c]/60 bg-[#0a0d09]/55 px-6 py-2.5 font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-[#e6c27a] backdrop-blur-sm transition-colors duration-300 hover:bg-[#c9a45c] hover:text-[#16130c] sm:px-8 sm:py-3 sm:text-xs"
+    className="cursor-pointer rounded-full border border-[#1c2b1e]/50 bg-transparent px-6 py-2.5 font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-[#1c2b1e] transition-colors duration-300 hover:bg-[#1c2b1e] hover:text-[#f1e7d5] sm:px-8 sm:py-3 sm:text-xs"
   >
     {children}
   </button>
@@ -102,22 +102,22 @@ function App() {
           animate={{ scaleX: 1, opacity: 0 }}
           transition={{ duration: 2.4, ease: EASE, delay: 0.9 }}
         />
-
-        <motion.div
-          data-testid="hero-cta"
-          className="absolute inset-x-0 bottom-[9%] z-10 flex flex-wrap items-center justify-center gap-3 px-4 sm:gap-5"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 2.2 }}
-        >
-          <HeroBtn onClick={() => scrollToId("chicken-oil")} testId="hero-discover-btn">
-            Discover Our Pure Chicken Oil
-          </HeroBtn>
-          <HeroBtn onClick={() => scrollToId("trade")} testId="hero-trade-btn">
-            Trade Enquiries
-          </HeroBtn>
-        </motion.div>
       </section>
+
+      <motion.div
+        data-testid="hero-cta"
+        className="flex flex-wrap items-center justify-center gap-3 bg-[#f1e7d5] px-4 py-8 sm:gap-5"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 2.2 }}
+      >
+        <HeroBtn onClick={() => scrollToId("chicken-oil")} testId="hero-discover-btn">
+          Discover Our Pure Chicken Oil
+        </HeroBtn>
+        <HeroBtn onClick={() => scrollToId("trade")} testId="hero-trade-btn">
+          Trade Enquiries
+        </HeroBtn>
+      </motion.div>
 
       <StorySection />
       <ProductsSection />
