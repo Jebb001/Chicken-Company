@@ -14,28 +14,6 @@ import {
 } from "@/components/Sections";
 
 const EASE = [0.76, 0, 0.24, 1];
-const CREAM = "#f1e7d5";
-
-const Cover = ({ src, alt, testId }) => (
-  <section
-    data-testid={testId}
-    className="page-section relative flex h-[100svh] items-center justify-center overflow-hidden"
-    style={{ background: CREAM }}
-  >
-    <motion.img
-      src={src}
-      alt={alt}
-      data-testid={`${testId}-image`}
-      initial={{ opacity: 0, y: 64, scale: 0.985 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-      className="page-img h-full w-full will-change-transform"
-      draggable={false}
-      loading="lazy"
-    />
-  </section>
-);
 
 const HeroBtn = ({ children, onClick, testId }) => (
   <button
@@ -141,16 +119,11 @@ function App() {
         </motion.div>
       </section>
 
-      <Cover src="/page-1.jpg" alt="The Chicken Whisperer? — the story of our founder and our principles" testId="page-story" />
       <StorySection />
       <ProductsSection />
-      <Cover src="/page-4.jpg" alt="The Farm To Pantry range — flavour-rich chicken oil and premium pantry products" testId="page-farm-to-pantry" />
       <ChickenOilSection />
-      <Cover src="/page-2.jpg" alt="Pet Nutrition — high-protein premium pet foods, supplements and treats" testId="page-pet-nutrition" />
       <PetSection />
-      <Cover src="/page-3.jpg" alt="For Food Manufacturing and Foodservice — bulk Chicken Oil supply" testId="page-trade-supply" />
       <TradeSection />
-      <Cover src="/page-5.jpg" alt="Farm To Pantry — Opening Soon" testId="page-opening-soon" />
       <ShopSection />
       <ContactSection />
     </main>
