@@ -70,7 +70,7 @@ const Photo = ({ src, alt, testId }) => (
     src={src}
     alt={alt}
     data-testid={testId}
-    className="h-auto w-full object-cover shadow-[0_30px_60px_-20px_rgba(20,16,8,0.45)]"
+    className="h-auto w-full object-cover"
     draggable={false}
     loading="lazy"
   />
