@@ -227,8 +227,8 @@ export const ShopSection = () => (
   <Shell id="shop" testId="section-shop">
     <div className="grid items-center gap-10 sm:gap-16 md:grid-cols-2">
       <motion.div {...REVEAL} className="order-2 md:order-1">
-        <p className="font-display text-xs font-semibold uppercase tracking-[0.4em] text-[#b98a2f]">Farm To Pantry</p>
-        <div className="mt-3"><Headline>Opening Soon.</Headline></div>
+        <p className="font-display text-xl tracking-[0.25em] text-[#b98a2f] sm:text-2xl">FARM TO PANTRY</p>
+        <div className="mt-4"><Headline>Opening Soon.</Headline></div>
         <Rule />
         <Copy>
           <p>Our first Farm To Pantry product, High-Welfare British Chicken Oil, will soon be available in 250ml bottles.</p>
