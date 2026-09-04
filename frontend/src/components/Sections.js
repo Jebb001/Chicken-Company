@@ -152,8 +152,8 @@ export const ProductsSection = () => (
 
 export const ChickenOilSection = () => (
   <section id="chicken-oil" data-testid="section-chicken-oil" className="relative bg-[#f1e7d5]">
-    <motion.div {...REVEAL} className="relative h-[38svh] min-h-[260px] overflow-hidden">
-      <img src="/photo-pour.jpg" alt="Farm To Pantry chicken oil pouring over roast potatoes" data-testid="chicken-oil-photo" className="h-full w-full object-cover" draggable={false} loading="lazy" />
+    <motion.div {...REVEAL} className="relative overflow-hidden">
+      <img src="/photo-pour.jpg" alt="Farm To Pantry chicken oil pouring over roast potatoes" data-testid="chicken-oil-photo" className="h-auto w-full" draggable={false} loading="lazy" />
     </motion.div>
     <div className="mx-auto max-w-3xl px-6 py-20 text-center sm:px-10 sm:py-24">
       <motion.div {...REVEAL}>
