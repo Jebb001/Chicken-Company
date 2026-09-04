@@ -15,6 +15,22 @@
   }
 }
 
+.page-img {
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-aspect-ratio: 4/5) {
+  .page-section {
+    height: auto;
+  }
+  .page-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
 
 .vignette {
   background:
