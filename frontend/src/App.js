@@ -172,7 +172,9 @@ function App() {
         <div className="mx-auto grid max-w-6xl items-center gap-8 md:grid-cols-[1fr_auto]">
           <div className="hidden md:block" data-testid="intro-copy">
             <h2 className="font-display text-3xl leading-snug text-[#1c2b1e] lg:text-4xl">
-              Original foods made with British chicken. Founded on principle.
+              Original foods made with British chicken.
+              <br />
+              Founded on principle.
             </h2>
             <p className="mt-4 max-w-2xl font-display text-base leading-relaxed text-[#3a362c] sm:text-lg">
               Farm To Pantry uses unique processes to create premium ingredients from 100% British, High-Welfare chicken. We are wholly committed to provenance that fully supports our British farmers and will never use frozen, imported ingredients. We are proudly building one of the UK&rsquo;s most sustainable and ethical food businesses; starting with our suppliers, to our loyal team, to our customers. From Farm To Pantry.

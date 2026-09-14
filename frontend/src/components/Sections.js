@@ -120,16 +120,6 @@ export const ProductsSection = () => (
         </div>
       </motion.div>
     </div>
-
-    <motion.div {...REVEAL} className="mt-16 border-y border-[#1c2b1e]/15 py-10 text-center" data-testid="range-growing-band">
-      <h3 className="font-display text-xl uppercase tracking-[0.25em] text-[#1c2b1e]">The Range Is Growing</h3>
-      <p className="mx-auto mt-4 max-w-2xl font-display text-base leading-relaxed text-[#3a362c] sm:text-lg">
-        Farm To Pantry is developing a wider range of original British chicken ingredients, including traditional cooking fats, stocks, gravies and other premium pantry products.
-      </p>
-      <div className="mt-8">
-        <Btn variant="ghost" onClick={() => scrollToId("trade")} testId="products-trade-btn">Trade Enquiries</Btn>
-      </div>
-    </motion.div>
   </Shell>
 );
 
