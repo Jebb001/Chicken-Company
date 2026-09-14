@@ -14,20 +14,6 @@ export const scrollToId = (id) => {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 };
 
-const Rule = () => (
-  <div className="my-6 flex items-center gap-3">
-    <span className="h-px w-14 bg-[#b98a2f]" />
-    <LeafMark />
-    <span className="h-px w-14 bg-[#b98a2f]" />
-  </div>
-);
-
-const LeafMark = () => (
-  <svg width="26" height="14" viewBox="0 0 26 14" fill="none" aria-hidden>
-    <path d="M13 1 C9 4, 7 8, 6 13 M13 1 C17 4, 19 8, 20 13 M13 1 L13 13" stroke="#b98a2f" strokeWidth="1.4" strokeLinecap="round" />
-  </svg>
-);
-
 export const Btn = ({ children, onClick, href, variant = "solid", testId }) => {
   const cls =
     variant === "solid"
@@ -89,7 +75,7 @@ export const StorySection = () => (
       <Photo src="/photo-story.jpg" alt="Our founder walking the pasture with his chickens at dawn" testId="story-photo" />
       <motion.div {...REVEAL}>
         <Headline>&ldquo;The Chicken Whisperer&rdquo;</Headline>
-        <Rule />
+        <div className="mt-6" />
         <Copy>
           <p>The name given to our Founder following his passion to develop first of their kind foods from the world&rsquo;s most consumed protein.</p>
           <p>But new products become meaningless without two key principles behind their creation: where our farmed animals come from, and their standards of welfare.</p>
@@ -105,7 +91,7 @@ export const ProductsSection = () => (
   <Shell id="products" testId="section-products">
     <motion.div {...REVEAL} className="mx-auto max-w-3xl text-center">
       <Headline>The Products</Headline>
-      <div className="flex justify-center"><Rule /></div>
+      <div className="mt-6" />
       <Copy>
         <p>As we launch our Pure Chicken Oil, we have already developed a number of further unique, sustainable foods and ingredients, all made from our High Welfare, British farmed chicken — including traditional cooking fats, stocks, gravies and other premium pantry products.</p>
       </Copy>
@@ -184,7 +170,7 @@ export const PetSection = () => (
     <div className="grid items-center gap-10 sm:gap-16 md:grid-cols-2">
       <motion.div {...REVEAL} className="order-2 md:order-1">
         <Headline>Pet Nutrition</Headline>
-        <Rule />
+        <div className="mt-6" />
         <Copy>
           <p>Farm To Pantry is developing British chicken oils and protein ingredients for use in pet supplements, treats and functional nutrition products.</p>
           <p>We work with manufacturers and brand owners to explore suitable formats, specifications and product-development opportunities.</p>
@@ -206,7 +192,7 @@ export const TradeSection = () => (
       <Photo src="/photo-chef.jpg" alt="A chef at work in a professional kitchen" testId="trade-photo" />
       <motion.div {...REVEAL}>
         <Headline>British Chicken Oil for Food Manufacturing and Foodservice</Headline>
-        <Rule />
+        <div className="mt-6" />
         <ul className="space-y-3 font-display text-base text-[#3a362c] sm:text-lg">
           <Bullet>Bulk supply for manufacturers, foodservice operators and ingredient users</Bullet>
           <Bullet>Available formats from 5 litre PET containers to 1,000 litre IBCs</Bullet>
@@ -232,7 +218,7 @@ export const ShopSection = () => (
       <motion.div {...REVEAL} className="order-2 md:order-1">
         <p className="font-display text-xl tracking-[0.25em] text-[#b98a2f] sm:text-2xl">FARM TO PANTRY</p>
         <div className="mt-4"><Headline>Opening Soon.</Headline></div>
-        <Rule />
+        <div className="mt-6" />
         <Copy>
           <p>Our first Farm To Pantry product, High-Welfare British Chicken Oil, will soon be available in 250ml bottles.</p>
         </Copy>
@@ -260,11 +246,7 @@ export const ContactSection = () => (
   <Shell id="contact" testId="section-contact" dark>
     <motion.div {...REVEAL} className="mx-auto max-w-3xl text-center">
       <h2 className="font-display text-4xl leading-tight text-[#e6c27a] sm:text-5xl">Contact</h2>
-      <div className="my-6 flex items-center justify-center gap-3">
-        <span className="h-px w-14 bg-[#b98a2f]" />
-        <LeafMark />
-        <span className="h-px w-14 bg-[#b98a2f]" />
-      </div>
+      <div className="mt-6" />
       <p className="font-display text-base leading-relaxed text-[#f1e7d5]/80 sm:text-lg">
         Every enquiry is read by our team. Choose the route that fits best and we will come back to you.
       </p>
