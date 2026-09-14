@@ -11,7 +11,12 @@ const EMAIL = "team@thechickenwhisperer.co.uk";
 const mailto = (subject) => `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}`;
 
 export const scrollToId = (id) => {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  const el = document.getElementById(id);
+  if (!el) return;
+  const go = () => window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 64, behavior: "smooth" });
+  go();
+  setTimeout(go, 700);
+  setTimeout(go, 1600);
 };
 
 export const Btn = ({ children, onClick, href, variant = "solid", testId }) => {
@@ -251,10 +256,14 @@ export const ContactSection = () => (
       ))}
     </motion.div>
     <motion.div {...REVEAL} className="mt-16 border-t border-[#e6c27a]/20 pt-8 text-center">
-      <a href={mailto("Hello")} data-testid="contact-email-link" className="font-display text-lg tracking-[0.2em] text-[#e6c27a] transition-opacity hover:opacity-80">
-        {EMAIL.toUpperCase()}
+      <a
+        href={mailto("Hello")}
+        data-testid="contact-email-link"
+        className="inline-block rounded-full border border-[#e6c27a] bg-[#e6c27a]/10 px-8 py-4 font-display text-sm font-semibold uppercase tracking-[0.2em] text-[#e6c27a] transition-all duration-300 hover:bg-[#e6c27a] hover:text-[#16130c] sm:text-base"
+      >
+        Email the team — {EMAIL}
       </a>
-      <p className="mt-4 font-display text-xs uppercase tracking-[0.3em] text-[#f1e7d5]/50">
+      <p className="mt-6 font-display text-sm uppercase tracking-[0.3em] text-[#f1e7d5]/50">
         The Chicken Whisperer · Farm To Pantry · Launching September 2026
       </p>
     </motion.div>

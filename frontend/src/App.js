@@ -149,16 +149,9 @@ function App() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.4, delay: 2.3 }}
         >
-          <span className="font-display text-xs font-semibold uppercase tracking-[0.45em] text-[#e6c27a] [text-shadow:0_1px_12px_rgba(10,13,9,0.6)]">
+          <span className="font-display text-sm font-semibold uppercase tracking-[0.45em] text-[#e6c27a] [text-shadow:0_1px_12px_rgba(10,13,9,0.6)] md:text-base">
             Launching September 2026
           </span>
-          <a
-            href="mailto:team@thechickenwhisperer.co.uk"
-            data-testid="hero-email-link"
-            className="font-display text-xs uppercase tracking-[0.35em] text-[#e6c27a]/85 [text-shadow:0_1px_12px_rgba(10,13,9,0.6)] transition-opacity hover:opacity-75"
-          >
-            team@thechickenwhisperer.co.uk
-          </a>
         </motion.div>
       </section>
 
