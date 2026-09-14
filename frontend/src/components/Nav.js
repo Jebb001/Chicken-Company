@@ -38,28 +38,35 @@ export default function Nav() {
     <>
       <motion.header
         data-testid="main-nav"
-        className="fixed inset-x-0 top-0 z-50 border-b border-[#1c2b1e]/10 bg-[#f1e7d5]/95 backdrop-blur-sm"
+        className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
+          show ? "border-b border-[#1c2b1e]/10 bg-[#f1e7d5]/95 backdrop-blur-sm" : "border-b border-transparent bg-transparent"
+        }`}
         initial={false}
-        animate={{ y: show ? 0 : "-100%" }}
-        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="mx-auto flex max-w-[1600px] items-center justify-between px-5 py-3.5 sm:px-8">
           <button
             onClick={toTop}
             data-testid="nav-brand"
-            className="cursor-pointer font-display text-sm font-bold uppercase tracking-[0.22em] text-[#1c2b1e] transition-colors hover:text-[#C89D3C]"
+            className={`cursor-pointer font-display text-sm font-bold uppercase tracking-[0.22em] text-[#1c2b1e] transition-all duration-500 hover:text-[#C89D3C] ${
+              show ? "opacity-100" : "pointer-events-none opacity-0"
+            }`}
           >
             The Chicken Whisperer
           </button>
 
-          <button
+          <motion.button
             onClick={() => setOpen(true)}
             data-testid="nav-menu-button"
             aria-label="Open menu"
-            className="cursor-pointer text-[#1c2b1e]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 2.2 }}
+            className={`cursor-pointer rounded-full p-2 transition-colors duration-500 ${
+              show ? "text-[#1c2b1e]" : "bg-[#f1e7d5]/75 text-[#1c2b1e] hover:bg-[#f1e7d5]"
+            }`}
           >
             <Menu size={26} strokeWidth={1.6} />
-          </button>
+          </motion.button>
         </div>
       </motion.header>
 
