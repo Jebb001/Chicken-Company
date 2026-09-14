@@ -84,16 +84,18 @@ function App() {
                 className="hero-layer hero-bg"
                 draggable={false}
               />
-              <motion.img
-                src="/hero-chicken.png"
-                alt=""
-                data-testid="hero-chicken"
-                className="hero-layer hero-fg"
-                draggable={false}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1], delay: 1.2 }}
-              />
+              <div className="hero-chicken-shrink absolute inset-0">
+                <motion.img
+                  src="/hero-chicken.png"
+                  alt=""
+                  data-testid="hero-chicken"
+                  className="hero-layer hero-fg"
+                  draggable={false}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1], delay: 1.2 }}
+                />
+              </div>
               <motion.img
                 src="/hero-logo.png"
                 alt="The Chicken Whisperer"
@@ -129,14 +131,14 @@ function App() {
             data-testid="hero-tagline-main"
             className="mx-auto max-w-5xl font-display text-lg font-black uppercase leading-relaxed tracking-[0.18em] text-[#22301f] sm:text-xl md:text-2xl"
           >
-            Original foods made with British chicken.
-            <br />
+            Original foods made with British chicken.{" "}
+            <br className="hidden md:inline" />
             Founded on principle.
           </p>
           <span className="h-px w-10 bg-[#22301f]/70" />
           <p
             data-testid="hero-tagline-sub"
-            className="mt-4 font-display text-2xl font-bold uppercase tracking-[0.3em] text-[#6b5013] [text-shadow:0_1px_10px_rgba(245,238,220,0.45)] sm:mt-6 sm:text-3xl md:mt-16 md:text-4xl md:text-[#C89D3C] md:[text-shadow:1px_0_3px_rgba(10,13,9,0.8),-1px_0_3px_rgba(10,13,9,0.8),0_1px_3px_rgba(10,13,9,0.8),0_-1px_3px_rgba(10,13,9,0.8),0_3px_20px_rgba(10,13,9,0.9)]"
+            className="mt-4 font-display text-[15px] font-bold uppercase tracking-[0.18em] text-[#1a2418] sm:mt-6 sm:text-xl md:mt-16 md:text-4xl md:tracking-[0.3em] md:text-[#C89D3C] md:[text-shadow:1px_0_3px_rgba(10,13,9,0.8),-1px_0_3px_rgba(10,13,9,0.8),0_1px_3px_rgba(10,13,9,0.8),0_-1px_3px_rgba(10,13,9,0.8),0_3px_20px_rgba(10,13,9,0.9)]"
           >
             Trade. Retail. Private Label.
           </p>
