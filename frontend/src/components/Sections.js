@@ -178,7 +178,7 @@ export const TradeSection = () => (
     <div className="grid items-center gap-10 sm:gap-16 md:grid-cols-2">
       <Photo src="/photo-chef.jpg" alt="A chef at work in a professional kitchen" testId="trade-photo" />
       <motion.div {...REVEAL}>
-        <Headline>British Chicken Oil for Food Manufacturing and Foodservice</Headline>
+        <Headline>British chicken oil for food service</Headline>
         <div className="mt-6" />
         <ul className="space-y-3 font-display text-base text-[#3a362c] sm:text-lg">
           <Bullet>Bulk supply for manufacturers, foodservice operators and ingredient users</Bullet>

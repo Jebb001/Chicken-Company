@@ -120,7 +120,7 @@ function App() {
 
         <motion.div
           data-testid="hero-taglines"
-          className="absolute inset-x-4 bottom-[15%] z-10 flex flex-col items-center gap-3 text-center sm:gap-4"
+          className="absolute inset-x-4 bottom-[23%] z-10 flex flex-col items-center gap-3 text-center sm:gap-4"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: 1.9 }}
@@ -136,7 +136,7 @@ function App() {
           <span className="h-px w-10 bg-[#22301f]/70" />
           <p
             data-testid="hero-tagline-sub"
-            className="font-display text-2xl font-bold uppercase tracking-[0.3em] text-[#C89D3C] [text-shadow:0_1px_10px_rgba(10,13,9,0.5)] sm:text-3xl md:text-4xl"
+            className="font-display text-2xl font-bold uppercase tracking-[0.3em] text-[#6b5013] [text-shadow:0_1px_10px_rgba(245,238,220,0.45)] sm:text-3xl md:text-4xl md:text-[#C89D3C] md:[text-shadow:0_1px_10px_rgba(10,13,9,0.5)]"
           >
             Trade. Retail. Private Label.
           </p>
