@@ -238,13 +238,13 @@ export const ContactSection = () => (
         Every enquiry is read by our team. Choose the route that fits best and we will come back to you.
       </p>
     </motion.div>
-    <motion.div {...REVEAL} className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <motion.div {...REVEAL} className="mx-auto mt-12 flex max-w-4xl flex-wrap justify-center gap-4">
       {CATEGORIES.map(([label, subject, tid]) => (
         <a
           key={tid}
           href={mailto(subject)}
           data-testid={tid}
-          className="border border-[#e6c27a]/25 px-6 py-5 text-center font-display text-sm uppercase tracking-[0.2em] text-[#f1e7d5] transition-colors duration-300 hover:border-[#e6c27a] hover:bg-[#e6c27a]/10"
+          className="w-full border border-[#e6c27a]/25 px-6 py-5 text-center font-display text-sm uppercase tracking-[0.2em] text-[#f1e7d5] transition-colors duration-300 hover:border-[#e6c27a] hover:bg-[#e6c27a]/10 sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.67rem)]"
         >
           {label}
         </a>

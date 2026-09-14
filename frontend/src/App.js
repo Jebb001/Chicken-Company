@@ -136,7 +136,7 @@ function App() {
           <span className="h-px w-10 bg-[#22301f]/70" />
           <p
             data-testid="hero-tagline-sub"
-            className="font-display text-2xl font-bold uppercase tracking-[0.3em] text-[#6b5013] [text-shadow:0_1px_10px_rgba(245,238,220,0.45)] sm:text-3xl md:text-4xl md:text-[#C89D3C] md:[text-shadow:0_1px_10px_rgba(10,13,9,0.5)]"
+            className="mt-4 font-display text-2xl font-bold uppercase tracking-[0.3em] text-[#6b5013] [text-shadow:0_1px_10px_rgba(245,238,220,0.45)] sm:mt-6 sm:text-3xl md:mt-16 md:text-4xl md:text-[#C89D3C] md:[text-shadow:1px_0_3px_rgba(10,13,9,0.8),-1px_0_3px_rgba(10,13,9,0.8),0_1px_3px_rgba(10,13,9,0.8),0_-1px_3px_rgba(10,13,9,0.8),0_3px_20px_rgba(10,13,9,0.9)]"
           >
             Trade. Retail. Private Label.
           </p>
