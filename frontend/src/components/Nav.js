@@ -52,24 +52,11 @@ export default function Nav() {
             The Chicken Whisperer
           </button>
 
-          <nav className="hidden items-center gap-6 xl:flex" data-testid="nav-links">
-            {LINKS.map(([label, id, tid]) => (
-              <button
-                key={tid}
-                onClick={() => go(id)}
-                data-testid={tid}
-                className="cursor-pointer whitespace-nowrap font-display text-[11px] font-semibold uppercase tracking-[0.16em] text-[#1c2b1e]/80 transition-colors hover:text-[#C89D3C]"
-              >
-                {label}
-              </button>
-            ))}
-          </nav>
-
           <button
             onClick={() => setOpen(true)}
             data-testid="nav-menu-button"
             aria-label="Open menu"
-            className="cursor-pointer text-[#1c2b1e] xl:hidden"
+            className="cursor-pointer text-[#1c2b1e]"
           >
             <Menu size={26} strokeWidth={1.6} />
           </button>
