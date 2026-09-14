@@ -117,18 +117,24 @@ function App() {
         />
 
         <motion.div
-          data-testid="hero-copy"
-          className="absolute inset-x-6 bottom-[16%] z-10 text-center md:hidden"
+          data-testid="hero-taglines"
+          className="absolute inset-x-4 bottom-[13%] z-10 flex flex-col items-center gap-2 text-center sm:gap-3"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: 1.9 }}
         >
-          <h1
-            data-testid="hero-headline"
-            className="font-display text-2xl leading-snug text-[#f1e7d5] [text-shadow:0_2px_20px_rgba(10,13,9,0.55)]"
+          <p
+            data-testid="hero-tagline-main"
+            className="font-display text-[11px] font-semibold uppercase tracking-[0.3em] text-[#f1e7d5] [text-shadow:0_1px_14px_rgba(10,13,9,0.75)] sm:text-sm"
           >
             Original foods made with British chicken. Founded on principle.
-          </h1>
+          </p>
+          <p
+            data-testid="hero-tagline-sub"
+            className="font-display text-[10px] uppercase tracking-[0.4em] text-[#e6c27a] [text-shadow:0_1px_14px_rgba(10,13,9,0.75)] sm:text-xs"
+          >
+            Trade. Retail. Private Label.
+          </p>
         </motion.div>
 
         <motion.div
