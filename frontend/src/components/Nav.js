@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { scrollToId } from "./Sections";
 
 const LINKS = [
@@ -72,46 +72,39 @@ export default function Nav() {
 
       <AnimatePresence>
         {open && (
-          <motion.div
-            data-testid="nav-mobile-overlay"
-            className="fixed inset-0 z-[60] flex flex-col bg-[#16130c]"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.35 }}
-          >
-            <div className="flex items-center justify-between px-5 py-3.5 sm:px-8">
-              <span className="font-display text-sm font-bold uppercase tracking-[0.22em] text-[#C89D3C]">
-                The Chicken Whisperer
-              </span>
-              <button
-                onClick={() => setOpen(false)}
-                data-testid="nav-close-button"
-                aria-label="Close menu"
-                className="cursor-pointer text-[#f1e7d5]"
-              >
-                <X size={28} strokeWidth={1.6} />
-              </button>
-            </div>
-            <nav className="flex flex-1 flex-col items-start justify-center gap-2 px-8">
+          <>
+            <div
+              className="fixed inset-0 z-[55]"
+              data-testid="nav-backdrop"
+              onClick={() => setOpen(false)}
+            />
+            <motion.nav
+              data-testid="nav-dropdown"
+              className="fixed right-4 top-16 z-[60] w-72 border border-[#1c2b1e]/15 bg-[#f1e7d5] py-2 shadow-[0_20px_50px_-16px_rgba(20,16,8,0.4)] sm:right-8"
+              initial={{ opacity: 0, y: -12, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -12, scale: 0.98 }}
+              transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+              style={{ transformOrigin: "top right" }}
+            >
               {LINKS.map(([label, id, tid], i) => (
                 <motion.button
                   key={tid}
                   onClick={() => go(id)}
                   data-testid={`${tid}-mobile`}
-                  className="cursor-pointer py-2 text-left font-display text-2xl uppercase tracking-[0.14em] text-[#f1e7d5] transition-colors hover:text-[#C89D3C] sm:text-3xl"
-                  initial={{ opacity: 0, x: -24 }}
+                  className="block w-full cursor-pointer px-6 py-3 text-left font-display text-sm font-semibold uppercase tracking-[0.16em] text-[#1c2b1e] transition-colors hover:bg-[#1c2b1e]/5 hover:text-[#C89D3C]"
+                  initial={{ opacity: 0, x: 12 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.08 + i * 0.06 }}
+                  transition={{ duration: 0.3, delay: 0.04 + i * 0.04 }}
                 >
                   {label}
                 </motion.button>
               ))}
-            </nav>
-            <p className="px-8 pb-8 font-display text-[10px] uppercase tracking-[0.35em] text-[#C89D3C]/70">
-              team@thechickenwhisperer.co.uk
-            </p>
-          </motion.div>
+              <p className="border-t border-[#1c2b1e]/10 px-6 pb-2 pt-3 font-display text-[9px] uppercase tracking-[0.3em] text-[#1c2b1e]/50">
+                team@thechickenwhisperer.co.uk
+              </p>
+            </motion.nav>
+          </>
         )}
       </AnimatePresence>
     </>
