@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import Lenis from "lenis";
 import "@/App.css";
+import Nav from "@/components/Nav";
 import {
   StorySection,
   ProductsSection,
@@ -56,6 +57,7 @@ function App() {
 
   return (
     <main data-testid="site-root" className="bg-[#151009]">
+      <Nav />
       <section
         ref={frame}
         onMouseMove={onMove}
