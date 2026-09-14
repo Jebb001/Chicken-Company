@@ -157,16 +157,19 @@ export const ChickenOilSection = () => (
     </motion.div>
     <div className="mx-auto max-w-3xl px-6 py-20 text-center sm:px-10 sm:py-24">
       <motion.div {...REVEAL}>
-        <Headline>Our journey starts with our unique, pure Chicken Oil</Headline>
-        <div className="flex justify-center"><Rule /></div>
         <Copy>
-          <p>Our first premium product is a luxurious, flavour-rich chicken oil, naturally manufactured from our newly developed recipe. It is naturally rich in monounsaturated fat, Omega 3 and 6, contains no cholesterol or salt. Its high smoke point makes it a versatile addition to your pantry.</p>
+          <p className="text-lg sm:text-xl">Our journey starts with our luxurious, flavour-rich chicken oil, naturally manufactured from our newly developed recipe. It is naturally rich in monounsaturated fat, Omega 3 and 6, contains no cholesterol or salt. Its high smoke point makes it a versatile addition to your pantry.</p>
         </Copy>
         <ul className="mx-auto mt-10 max-w-xl space-y-4 text-left font-display text-base text-[#3a362c] sm:text-lg">
           <Bullet>Create the ultimate Sunday roast with a splash over the bird, make the ultimate crispy potatoes, and add it to your gravy for flavour and finish.</Bullet>
           <Bullet>Stir fry a quick chicken, mushroom and rice.</Bullet>
           <Bullet>Use it as the base for a seed-oil free salad dressing.</Bullet>
         </ul>
+        <div className="mt-12 border-t border-[#1c2b1e]/15 pt-10">
+          <Copy>
+            <p>We are developing a number of further unique, sustainable foods and ingredients for the Farm To Pantry brand and private label partners, all made from our High-Welfare, British farmed chicken. These will include traditional cooking fats, stocks, gravies and other premium pantry products.</p>
+          </Copy>
+        </div>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Btn onClick={() => scrollToId("shop")} testId="oil-shop-btn">Visit The Shop</Btn>
           <Btn variant="ghost" onClick={() => scrollToId("trade")} testId="oil-trade-btn">Trade Enquiries</Btn>
