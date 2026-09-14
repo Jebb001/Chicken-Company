@@ -90,35 +90,32 @@ export const StorySection = () => (
 export const ProductsSection = () => (
   <Shell id="products" testId="section-products">
     <motion.div {...REVEAL} className="mx-auto max-w-3xl text-center">
-      <Headline>The Products</Headline>
+      <Headline>More unique, premium foods</Headline>
       <div className="mt-6" />
       <Copy>
-        <p>As we launch our Pure Chicken Oil, we have already developed a number of further unique, sustainable foods and ingredients, all made from our High Welfare, British farmed chicken — including traditional cooking fats, stocks, gravies and other premium pantry products.</p>
+        <p>
+          As we launch our{" "}
+          <button
+            onClick={() => scrollToId("chicken-oil")}
+            data-testid="products-oil-link"
+            className="cursor-pointer font-semibold text-[#1c2b1e] underline decoration-[#b98a2f] decoration-2 underline-offset-4 transition-colors hover:text-[#b98a2f]"
+          >
+            Pure Chicken Oil
+          </button>
+          , we are already developing a number of further unique, sustainable foods and ingredients, all made from our High Welfare, British farmed chicken. Including traditional cooking fats, stocks, gravies and other chilled and ambient pantry products.
+        </p>
       </Copy>
     </motion.div>
 
-    <div className="mt-16 grid gap-10 sm:gap-12 md:grid-cols-2">
-      <motion.div {...REVEAL} className="border border-[#1c2b1e]/15 bg-[#faf5e9] p-8 shadow-[0_24px_50px_-24px_rgba(20,16,8,0.3)] sm:p-10" data-testid="chicken-oil-card">
-        <h3 className="font-display text-2xl text-[#1c2b1e] sm:text-3xl">British Chicken Oil</h3>
-        <ul className="mt-6 space-y-3 font-display text-base text-[#3a362c] sm:text-lg">
-          <Bullet>What it is</Bullet>
-          <Bullet>How it tastes</Bullet>
-          <Bullet>How it can be used</Bullet>
-          <Bullet>Why it differs from seed oils</Bullet>
-          <Bullet>Frying, roasting, mayonnaise and dressings</Bullet>
-          <Bullet>250ml retail format</Bullet>
-        </ul>
-        <p className="mt-6 font-display text-xs font-semibold uppercase tracking-[0.3em] text-[#b98a2f]">Launching soon</p>
-      </motion.div>
-
-      <motion.div {...REVEAL} className="flex flex-col justify-center">
+    <div className="mt-16 flex justify-center">
+      <motion.div {...REVEAL} className="max-w-xl">
         <ul className="space-y-5 font-display text-lg text-[#1c2b1e] sm:text-xl">
           <Bullet>High-welfare British chicken</Bullet>
           <Bullet>No seed oils or additives</Bullet>
           <Bullet>Made for home cooks and professional kitchens</Bullet>
           <Bullet>A growing range of original chicken ingredients</Bullet>
         </ul>
-        <div className="mt-10">
+        <div className="mt-10 text-center">
           <Btn onClick={() => scrollToId("chicken-oil")} testId="products-discover-btn">Discover Our Pure Chicken Oil</Btn>
         </div>
       </motion.div>
