@@ -74,20 +74,33 @@ function App() {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 2.6, ease: EASE, delay: 0.3 }}
           >
-            <motion.div style={{ x: imgX, y: imgY }} className="h-full w-full">
+            <motion.div style={{ x: imgX, y: imgY }} className="absolute inset-0">
               <img
-                src="/hero.png"
-                alt="The Chicken Whisperer — Original foods made with British chicken. Launching September 2026."
+                src="/hero-bg.jpg"
+                alt=""
                 data-testid="hero-image"
-                className="hero-desktop-img hero-fit absolute inset-0 h-full w-full will-change-transform"
+                className="hero-layer hero-bg"
                 draggable={false}
               />
-              <img
-                src="/hero-mobile.jpg"
-                alt="The Chicken Whisperer — Original foods made with British chicken. Launching September 2026."
-                data-testid="hero-image-mobile"
-                className="hero-mobile-img absolute inset-0 h-full w-full object-cover will-change-transform"
+              <motion.img
+                src="/hero-chicken.png"
+                alt=""
+                data-testid="hero-chicken"
+                className="hero-layer hero-fg"
                 draggable={false}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1], delay: 1.2 }}
+              />
+              <motion.img
+                src="/hero-logo.png"
+                alt="The Chicken Whisperer"
+                data-testid="hero-logo"
+                className="hero-layer hero-fg"
+                draggable={false}
+                initial={{ opacity: 0, y: -24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1], delay: 1.5 }}
               />
             </motion.div>
           </motion.div>
@@ -102,21 +115,67 @@ function App() {
           animate={{ scaleX: 1, opacity: 0 }}
           transition={{ duration: 2.4, ease: EASE, delay: 0.9 }}
         />
+
+        <motion.div
+          data-testid="hero-copy"
+          className="absolute inset-x-6 bottom-[16%] z-10 text-center md:hidden"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: 1.9 }}
+        >
+          <h1
+            data-testid="hero-headline"
+            className="font-display text-2xl leading-snug text-[#f1e7d5] [text-shadow:0_2px_20px_rgba(10,13,9,0.55)]"
+          >
+            Original foods made with British chicken. Founded on principle.
+          </h1>
+        </motion.div>
+
+        <motion.div
+          data-testid="hero-launch-line"
+          className="absolute inset-x-0 bottom-6 z-10 hidden flex-col items-center gap-2 md:flex"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.4, delay: 2.3 }}
+        >
+          <span className="font-display text-xs font-semibold uppercase tracking-[0.45em] text-[#e6c27a] [text-shadow:0_1px_12px_rgba(10,13,9,0.6)]">
+            Launching September 2026
+          </span>
+          <a
+            href="mailto:team@thechickenwhisperer.co.uk"
+            data-testid="hero-email-link"
+            className="font-display text-xs uppercase tracking-[0.35em] text-[#e6c27a]/85 [text-shadow:0_1px_12px_rgba(10,13,9,0.6)] transition-opacity hover:opacity-75"
+          >
+            team@thechickenwhisperer.co.uk
+          </a>
+        </motion.div>
       </section>
 
       <motion.div
         data-testid="hero-cta"
-        className="flex flex-wrap items-center justify-center gap-3 bg-[#f1e7d5] px-4 py-8 sm:gap-5"
+        className="bg-[#f1e7d5] px-6 py-12 sm:px-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 2.2 }}
       >
-        <HeroBtn onClick={() => scrollToId("chicken-oil")} testId="hero-discover-btn">
-          Discover Our Pure Chicken Oil
-        </HeroBtn>
-        <HeroBtn onClick={() => scrollToId("trade")} testId="hero-trade-btn">
-          Trade Enquiries
-        </HeroBtn>
+        <div className="mx-auto grid max-w-6xl items-center gap-8 md:grid-cols-[1fr_auto]">
+          <div className="hidden md:block" data-testid="intro-copy">
+            <h2 className="font-display text-3xl leading-snug text-[#1c2b1e] lg:text-4xl">
+              Original foods made with British chicken. Founded on principle.
+            </h2>
+            <p className="mt-4 max-w-2xl font-display text-base leading-relaxed text-[#3a362c] sm:text-lg">
+              Farm To Pantry uses unique processes to create premium ingredients from 100% British, High-Welfare chicken. We are wholly committed to provenance that fully supports our British farmers and will never use frozen, imported ingredients. We are proudly building one of the UK&rsquo;s most sustainable and ethical food businesses; starting with our suppliers, to our loyal team, to our customers. From Farm To Pantry.
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 md:flex-col md:items-stretch">
+            <HeroBtn onClick={() => scrollToId("chicken-oil")} testId="hero-discover-btn">
+              Discover Our Pure Chicken Oil
+            </HeroBtn>
+            <HeroBtn onClick={() => scrollToId("trade")} testId="hero-trade-btn">
+              Trade Enquiries
+            </HeroBtn>
+          </div>
+        </div>
       </motion.div>
 
       <StorySection />
