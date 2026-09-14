@@ -122,7 +122,7 @@ function App() {
 
         <motion.div
           data-testid="hero-taglines"
-          className="absolute inset-x-4 bottom-[23%] z-10 flex flex-col items-center gap-3 text-center sm:gap-4"
+          className="absolute inset-x-4 bottom-[18%] z-10 flex flex-col items-center gap-3 text-center sm:gap-4"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: 1.9 }}
@@ -135,10 +135,9 @@ function App() {
             <br className="hidden md:inline" />
             Founded on principle.
           </p>
-          <span className="h-px w-10 bg-[#22301f]/70" />
           <p
             data-testid="hero-tagline-sub"
-            className="mt-4 font-display text-[15px] font-bold uppercase tracking-[0.18em] text-[#1a2418] sm:mt-6 sm:text-xl md:mt-16 md:text-4xl md:tracking-[0.3em] md:text-[#C89D3C] md:[text-shadow:1px_0_3px_rgba(10,13,9,0.8),-1px_0_3px_rgba(10,13,9,0.8),0_1px_3px_rgba(10,13,9,0.8),0_-1px_3px_rgba(10,13,9,0.8),0_3px_20px_rgba(10,13,9,0.9)]"
+            className="mt-4 font-display text-[15px] font-bold uppercase tracking-[0.18em] text-[#e6c27a] [text-shadow:0_1px_8px_rgba(10,13,9,0.7)] sm:mt-6 sm:text-xl md:mt-16 md:text-4xl md:tracking-[0.3em] md:text-[#C89D3C] md:[text-shadow:1px_0_3px_rgba(10,13,9,0.8),-1px_0_3px_rgba(10,13,9,0.8),0_1px_3px_rgba(10,13,9,0.8),0_-1px_3px_rgba(10,13,9,0.8),0_3px_20px_rgba(10,13,9,0.9)]"
           >
             Trade. Retail. Private Label.
           </p>
