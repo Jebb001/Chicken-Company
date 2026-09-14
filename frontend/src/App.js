@@ -125,7 +125,7 @@ function App() {
         >
           <p
             data-testid="hero-tagline-main"
-            className="mx-auto max-w-5xl font-display text-lg font-bold uppercase leading-relaxed tracking-[0.18em] text-[#22301f] [text-shadow:0_0_22px_rgba(245,238,220,0.95),0_0_8px_rgba(245,238,220,0.8)] sm:text-xl md:text-2xl"
+            className="mx-auto max-w-5xl font-display text-lg font-bold uppercase leading-relaxed tracking-[0.18em] text-[#22301f] sm:text-xl md:text-2xl"
           >
             Original foods made with British chicken.
             <br />
