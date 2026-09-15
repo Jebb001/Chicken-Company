@@ -227,11 +227,11 @@ export const ShopSection = () => (
 );
 
 const CATEGORIES = [
-  ["Retail and general enquiries", "Retail / General Enquiry", "contact-cat-retail"],
-  ["Food manufacturing and foodservice", "Food Manufacturing & Foodservice Enquiry", "contact-cat-foodservice"],
-  ["Pet nutrition", "Pet Nutrition Enquiry", "contact-cat-pet"],
-  ["Distribution and wholesale", "Distribution & Wholesale Enquiry", "contact-cat-wholesale"],
-  ["Press and partnerships", "Press & Partnerships Enquiry", "contact-cat-press"],
+  ["Retail & Wholesale", "partners@farmtopantry.co.uk", "contact-cat-retail"],
+  ["Foodservice", "foodservice@farmtopantry.co.uk", "contact-cat-foodservice"],
+  ["Pet Nutrition", "pets@farmtopantry.co.uk", "contact-cat-pet"],
+  ["General Enquiries", "team@farmtopantry.co.uk", "contact-cat-wholesale"],
+  ["Press and Partnerships", "press@farmtopantry.co.uk", "contact-cat-press"],
 ];
 
 export const ContactSection = () => (
@@ -244,24 +244,25 @@ export const ContactSection = () => (
       </p>
     </motion.div>
     <motion.div {...REVEAL} className="mx-auto mt-12 flex max-w-4xl flex-wrap justify-center gap-4">
-      {CATEGORIES.map(([label, subject, tid]) => (
+      {CATEGORIES.map(([label, address, tid]) => (
         <a
           key={tid}
-          href={mailto(subject)}
+          href={`mailto:${address}`}
           data-testid={tid}
-          className="w-full border border-[#e6c27a]/25 px-6 py-5 text-center font-display text-sm uppercase tracking-[0.2em] text-[#f1e7d5] transition-colors duration-300 hover:border-[#e6c27a] hover:bg-[#e6c27a]/10 sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.67rem)]"
+          className="w-full border border-[#e6c27a]/25 px-6 py-5 text-center transition-colors duration-300 hover:border-[#e6c27a] hover:bg-[#e6c27a]/10 sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.67rem)]"
         >
-          {label}
+          <span className="block font-display text-sm uppercase tracking-[0.2em] text-[#f1e7d5]">{label}</span>
+          <span className="mt-2 block font-display text-xs tracking-[0.08em] text-[#e6c27a]">{address}</span>
         </a>
       ))}
     </motion.div>
     <motion.div {...REVEAL} className="mt-16 border-t border-[#e6c27a]/20 pt-8 text-center">
       <a
-        href={mailto("Hello")}
+        href="mailto:team@farmtopantry.co.uk"
         data-testid="contact-email-link"
         className="inline-block rounded-full border border-[#e6c27a] bg-[#e6c27a]/10 px-8 py-4 font-display text-sm font-semibold uppercase tracking-[0.2em] text-[#e6c27a] transition-all duration-300 hover:bg-[#e6c27a] hover:text-[#16130c] sm:text-base"
       >
-        Email the team — {EMAIL}
+        Email the team — team@farmtopantry.co.uk
       </a>
       <p className="mt-6 font-display text-sm uppercase tracking-[0.3em] text-[#f1e7d5]/50">
         The Chicken Whisperer · Farm To Pantry · Launching September 2026
