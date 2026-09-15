@@ -163,31 +163,17 @@ function App() {
 
       <motion.div
         data-testid="hero-cta"
-        className="bg-[#f1e7d5] px-6 py-12 sm:px-10"
+        className="flex flex-wrap items-center justify-center gap-3 bg-[#f1e7d5] px-6 py-8 sm:gap-5 sm:px-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 2.2 }}
       >
-        <div className="mx-auto grid max-w-6xl items-center gap-8 md:grid-cols-[1fr_auto]">
-          <div className="hidden md:block" data-testid="intro-copy">
-            <h2 className="font-display text-3xl leading-snug text-[#1c2b1e] lg:text-4xl">
-              Original foods made with British chicken.
-              <br />
-              Founded on principle.
-            </h2>
-            <p className="mt-4 max-w-2xl font-display text-base leading-relaxed text-[#3a362c] sm:text-lg">
-              Farm To Pantry uses unique processes to create premium ingredients from 100% British, High-Welfare chicken. We are wholly committed to provenance that fully supports our British farmers and will never use frozen, imported ingredients. We are proudly building one of the UK&rsquo;s most sustainable and ethical food businesses; starting with our suppliers, to our loyal team, to our customers. From Farm To Pantry.
-            </p>
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 md:flex-col md:items-stretch">
-            <HeroBtn onClick={() => scrollToId("chicken-oil")} testId="hero-discover-btn">
-              Discover Our Pure Chicken Oil
-            </HeroBtn>
-            <HeroBtn onClick={() => scrollToId("trade")} testId="hero-trade-btn">
-              Trade Enquiries
-            </HeroBtn>
-          </div>
-        </div>
+        <HeroBtn onClick={() => scrollToId("chicken-oil")} testId="hero-discover-btn">
+          Discover Our Pure Chicken Oil
+        </HeroBtn>
+        <HeroBtn onClick={() => scrollToId("trade")} testId="hero-trade-btn">
+          Trade Enquiries
+        </HeroBtn>
       </motion.div>
 
       <StorySection />
