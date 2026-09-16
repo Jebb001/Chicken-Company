@@ -84,7 +84,7 @@ export const StorySection = () => (
         <Copy>
           <p>The name given to our Founder following his passion to develop first of their kind foods from the world&rsquo;s most consumed protein.</p>
           <p>But new products become meaningless without two key principles behind their creation: where our farmed animals come from, and their standards of welfare.</p>
-          <p>Both of these form everything that&rsquo;s important to us, and that&rsquo;s supporting our British Farmers. We will never import any chicken. Our welfare standards are too important, and so is the traceability and origin of our chicken. By working exclusively with Cranswick PLC, and their Red Tractor accreditation, our customers can be assured they are supporting the finest British produce, from Farm To Pantry.</p>
+          <p>Both of these form everything that&rsquo;s important to us, and that&rsquo;s supporting our British Farmers. We will never import any chicken. Our welfare standards are too important, and so is the traceability and origin of our chicken. By working exclusively with suppliers adopting the same ethos, our customers can be assured they are supporting the finest British produce.</p>
           <p>Add to these core beliefs our return to a traditional, pure, sustainable approach to food. These are the basis of everything we will do, just as it should be.</p>
         </Copy>
       </motion.div>
@@ -227,7 +227,7 @@ export const ShopSection = () => (
 );
 
 const CATEGORIES = [
-  ["Chicken Oil Retail & Wholesale", "partners@farmtopantry.co.uk", "contact-cat-retail"],
+  ["Chicken Oil\nRetail & Wholesale", "partners@farmtopantry.co.uk", "contact-cat-retail"],
   ["Foodservice", "foodservice@thechickenwhisperer.co.uk", "contact-cat-foodservice"],
   ["Pet Nutrition", "pets@thechickenwhisperer.co.uk", "contact-cat-pet"],
   ["General Enquiries", "team@thechickenwhisperer.co.uk", "contact-cat-wholesale"],
@@ -251,7 +251,11 @@ export const ContactSection = () => (
           data-testid={tid}
           className="w-full border border-[#e6c27a]/25 px-6 py-5 text-center transition-colors duration-300 hover:border-[#e6c27a] hover:bg-[#e6c27a]/10 sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.67rem)]"
         >
-          <span className="block font-display text-sm uppercase tracking-[0.2em] text-[#f1e7d5]">{label}</span>
+          <span className="block font-display text-sm uppercase tracking-[0.2em] text-[#f1e7d5]">
+            {label.split("\n").map((line) => (
+              <span key={line} className="block">{line}</span>
+            ))}
+          </span>
         </a>
       ))}
     </motion.div>
