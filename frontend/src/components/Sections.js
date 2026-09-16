@@ -227,11 +227,11 @@ export const ShopSection = () => (
 );
 
 const CATEGORIES = [
-  ["Retail & Wholesale", "partners@farmtopantry.co.uk", "contact-cat-retail"],
-  ["Foodservice", "foodservice@farmtopantry.co.uk", "contact-cat-foodservice"],
-  ["Pet Nutrition", "pets@farmtopantry.co.uk", "contact-cat-pet"],
-  ["General Enquiries", "team@farmtopantry.co.uk", "contact-cat-wholesale"],
-  ["Press and Partnerships", "press@farmtopantry.co.uk", "contact-cat-press"],
+  ["Chicken Oil Retail & Wholesale", "partners@farmtopantry.co.uk", "contact-cat-retail"],
+  ["Foodservice", "foodservice@thechickenwhisperer.co.uk", "contact-cat-foodservice"],
+  ["Pet Nutrition", "pets@thechickenwhisperer.co.uk", "contact-cat-pet"],
+  ["General Enquiries", "team@thechickenwhisperer.co.uk", "contact-cat-wholesale"],
+  ["Press and Partnerships", "press@thechickenwhisperer.co.uk", "contact-cat-press"],
 ];
 
 export const ContactSection = () => (
@@ -252,17 +252,16 @@ export const ContactSection = () => (
           className="w-full border border-[#e6c27a]/25 px-6 py-5 text-center transition-colors duration-300 hover:border-[#e6c27a] hover:bg-[#e6c27a]/10 sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.67rem)]"
         >
           <span className="block font-display text-sm uppercase tracking-[0.2em] text-[#f1e7d5]">{label}</span>
-          <span className="mt-2 block font-display text-xs tracking-[0.08em] text-[#e6c27a]">{address}</span>
         </a>
       ))}
     </motion.div>
     <motion.div {...REVEAL} className="mt-16 border-t border-[#e6c27a]/20 pt-8 text-center">
       <a
-        href="mailto:team@farmtopantry.co.uk"
+        href="mailto:team@thechickenwhisperer.co.uk"
         data-testid="contact-email-link"
         className="inline-block rounded-full border border-[#e6c27a] bg-[#e6c27a]/10 px-8 py-4 font-display text-sm font-semibold uppercase tracking-[0.2em] text-[#e6c27a] transition-all duration-300 hover:bg-[#e6c27a] hover:text-[#16130c] sm:text-base"
       >
-        Email the team — team@farmtopantry.co.uk
+        Email the team — team@thechickenwhisperer.co.uk
       </a>
       <p className="mt-6 font-display text-sm uppercase tracking-[0.3em] text-[#f1e7d5]/50">
         The Chicken Whisperer · Farm To Pantry · Launching September 2026
