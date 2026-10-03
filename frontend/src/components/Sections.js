@@ -268,7 +268,7 @@ export const ContactSection = () => (
         Email the team — team@thechickenwhisperer.co.uk
       </a>
       <p className="mt-6 font-display text-sm uppercase tracking-[0.3em] text-[#f1e7d5]/50">
-        The Chicken Whisperer · Farm To Pantry · Launching September 2026
+        The Chicken Whisperer · Farm To Pantry
       </p>
     </motion.div>
   </Shell>

@@ -145,20 +145,6 @@ function App() {
           </p>
         </motion.div>
 
-        <motion.div
-          data-testid="hero-launch-line"
-          className="absolute inset-x-0 bottom-6 z-10 flex flex-col items-center gap-2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.4, delay: 2.3 }}
-        >
-          <span
-            className="font-display font-semibold uppercase tracking-[0.45em] text-[#e6c27a] [text-shadow:0_1px_12px_rgba(10,13,9,0.6)]"
-            style={{ fontSize: "clamp(11px, 0.95vw, 16px)" }}
-          >
-            Launching September 2026
-          </span>
-        </motion.div>
       </section>
 
       <motion.div
